@@ -1752,7 +1752,7 @@ class Parsedown
             {
                 if (!$permitRawHtml)
                 {
-                    $markup .= self::escape($text, true);
+                    $markup .= str_replace('&amp;', '&', self::escape($text, true));
                 }
                 else
                 {
